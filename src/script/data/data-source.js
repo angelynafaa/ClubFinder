@@ -3,10 +3,10 @@ class DataSource{
     this.onSuccess = onSuccess;
     this.onFailed = onFailed;
 }
-}
 
-DataSource.prototype.searchClub = function (keyword) {
-    const filteredClubs = clubs.filter( (club) => club.name.toUpperCase().includes(keyword.toUpperCase()));
+
+searchClub(keyword) {
+    const filteredClubs = clubs.filter(club => club.name.toUpperCase().includes(keyword.toUpperCase()));
     
 
     if (filteredClubs.length) {
@@ -14,4 +14,5 @@ DataSource.prototype.searchClub = function (keyword) {
     } else {
         this.onFailed (`${keyword} + is not found`);
     }
-};
+}
+}
