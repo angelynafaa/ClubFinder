@@ -5,7 +5,7 @@ class ClubItem extends HTMLElement {
     }
 
     render() {
-        this.innerHTML = `
+        this.shadowDOM.innerHTML = `
             <img class="fan-art-club" src="${this._club.fanArt}" alt="Fan Art">
            <div class="club-info">
                <h2>${this._club.name}</h2>
